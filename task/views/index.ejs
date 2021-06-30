@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .titleHead {
+            font-size: large;
+            font-weight: bold;
+
+            text-align: center;
+            padding-left: 350;
+
+
+        }
+
+        .input {
+            margin: 0 15px;
+            width: 145px;
+            height: 20px;
+            font-weight: bold;
+            bottom: 10px
+        }
+
+        .input1 {
+            padding-top: 10px;
+            background-color: "#3CBC8D";
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h3 class="titleHead">
+                User details
+            </h3>
+            <form action="/task" method="POST">
+                <table>
+
+                    <tr>
+                        <td>
+                            <label class="input , label">
+                                Name
+                            </label><br>
+                            <input style=" background-color: #F9F1F1;" class="input" type="text" name="Name" for="name">
+                        </td>
+                        <td>
+                            <label class="input">
+                                Email Id
+                            </label><br>
+                            <input style="background-color: #F9F1F1;" class="input" type="text" name="email"
+                                for="email">
+                        </td>
+                        <td>
+                            <label class="input">
+                                Phone No
+                            </label><br>
+                            <input style="background-color: #F9F1F1;" class="input" type="text" name="Number"
+                                for="Number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="input">
+                                Image
+                            </label><br>
+                            <input style="background-color: #F9F1F1;" class="input " class="input1" type="text"
+                                name="image" for="image">
+                        </td>
+                    </tr>
+                </table>
+                <button style="background-color: blue; color:white ; width:100px ; height: 25px;"
+                    type="submit">Submit</button>
+            </form>
+
+
+
+
+            <table border="1" style="width:50%; margin-top: 100px;">
+                <tr>
+                    <th style="background-color: #94A279;width: 10px;">S.No</th>
+                    <th style="background-color: #94A279;width: 100px;">Name</th>
+                    <th style="background-color: #94A279;width: 115px;">Email ID </th>
+                    <th style="background-color: #94A279;width: 125px;">Phone No</th>
+                    <th style="background-color: #94A279;width: 135px;">Image</th>
+
+                </tr>
+
+
+                <% for (var i=1; i < data.length; i++) { %>
+                    <%if(data.length> 0 )
+                        {%>
+                        <tr>
+                            <td style=" background-color: grey;">
+                                <%=i%>
+                            </td>
+                            <td style=" background-color: grey;">
+                                <%=data[i].name%>
+                            </td>
+                            <td style="background-color: grey;">
+                                <%=data[i].email%>
+                            </td>
+                            <td style="background-color: grey;">
+                                <%=data[i].number%>
+                            </td>
+                            <td style="background-color: grey;">
+                                <%=data[i].image%>
+                            </td>
+                        </tr>
+
+
+
+                        <%}%>
+                            <%}%>
+
+
+
+
+            </table>
+        </center>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+</html>
